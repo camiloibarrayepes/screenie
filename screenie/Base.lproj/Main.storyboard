@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ddo-sP-52a">
-                                <rect key="frame" x="20" y="40" width="335" height="617"/>
+                                <rect key="frame" x="20" y="20" width="335" height="637"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready to record" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPS-21-peC">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="32"/>
@@ -37,33 +35,46 @@
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="70" id="lAL-dJ-LwQ"/>
                                         </constraints>
                                         <segments>
-                                            <segment title="Skate"/>
-                                            <segment title="Food"/>
-                                            <segment title="Cat"/>
-                                            <segment title="Nature"/>
+                                            <segment title="End Game"/>
+                                            <segment title="Joker"/>
+                                            <segment title="Lion King"/>
+                                            <segment title="Yesterday"/>
                                         </segments>
                                         <color key="tintColor" red="0.19270014590000001" green="0.41747303299999999" blue="0.20435590109999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="imagePicked:" destination="BYZ-38-t0r" eventType="valueChanged" id="KiD-SE-SVL"/>
                                         </connections>
                                     </segmentedControl>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="skate" translatesAutoresizingMaskIntoConstraints="NO" id="KAa-Rt-bEb">
-                                        <rect key="frame" x="0.0" y="120" width="335" height="335"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="335" id="RXE-hM-D1p"/>
-                                        </constraints>
-                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="iWP-Lr-ugD">
+                                        <rect key="frame" x="0.0" y="120" width="335" height="344.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="end_game" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KAa-Rt-bEb">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="200"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="Zo4-Y0-nzy"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="w7G-9u-EaS">
+                                                <rect key="frame" x="0.0" y="210" width="335" height="134.5"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <mutableString key="text">Avengers: Endgame is a 2019 American superhero film based on the Marvel Comics superhero team the Avengers, produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures. It is the sequel to 2012's The Avengers, 2015's Avengers: Age of Ultron, and 2018's Avengers: Infinity War, and the twenty-second film in the Marvel Cinematic Universe (MCU). It was directed by Anthony and Joe Russo and written by Christopher Markus and Stephen McFeely, and features an ensemble cast including Robert Downey Jr., Chris Evans, Mark Ruffalo, Chris Hemsworth, Scarlett Johansson, Jeremy Renner, Don Cheadle, Paul Rudd, Brie Larson, Karen Gillan, Danai Gurira, Benedict Wong, Jon Favreau, Bradley Cooper, Gwyneth Paltrow, and Josh Brolin. In the film, the surviving members of the Avengers and their allies attempt to reverse the damage caused by Thanos in Infinity War</mutableString>
+                                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FtT-u0-1f4">
-                                        <rect key="frame" x="0.0" y="485" width="335" height="56"/>
+                                        <rect key="frame" x="0.0" y="494.5" width="335" height="66.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Microphone Access" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7p7-kQ-zHU">
-                                                <rect key="frame" x="69" y="0.0" width="197" height="20"/>
+                                                <rect key="frame" x="69" y="0.0" width="197" height="30.5"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qeb-nn-DYO">
-                                                <rect key="frame" x="143" y="25" width="51" height="31"/>
+                                                <rect key="frame" x="143" y="35.5" width="51" height="31"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="31" id="naa-qo-naN"/>
                                                 </constraints>
@@ -74,7 +85,7 @@
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0oX-24-6Uo">
-                                        <rect key="frame" x="0.0" y="571" width="335" height="46"/>
+                                        <rect key="frame" x="0.0" y="591" width="335" height="46"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="46" id="i6M-dG-Mt3"/>
                                         </constraints>
@@ -99,6 +110,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="TextView" destination="w7G-9u-EaS" id="MuB-IH-pDi"/>
                         <outlet property="imagePicker" destination="bin-r5-1BE" id="TLs-um-Nmf"/>
                         <outlet property="miceToggle" destination="qeb-nn-DYO" id="gOk-ZH-uzI"/>
                         <outlet property="recordButton" destination="0oX-24-6Uo" id="BiO-MX-NSF"/>
@@ -108,10 +120,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="112.5"/>
+            <point key="canvasLocation" x="130.40000000000001" y="111.99400299850076"/>
         </scene>
     </scenes>
     <resources>
-        <image name="skate" width="2000" height="1333"/>
+        <image name="end_game" width="660" height="371"/>
     </resources>
 </document>
